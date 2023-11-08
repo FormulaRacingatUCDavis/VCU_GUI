@@ -5,16 +5,21 @@ Sensor apps1 = new Sensor("APPS1");
 Sensor apps2 = new Sensor("APPS2");
 Sensor brake = new Sensor("BRAKE");
 
+Serial myPort;
+
 int state = 0x03;
 
 void setup(){
   size(400, 300);
   frameRate(20);
+  
+  myPort =  new Serial(this, Serial.list()[0], 57600);
 }
 
 void draw(){
   background(0);
   
+  /*
   apps1.percentage+=2; 
   apps2.percentage++;
   brake.percentage+=3;
@@ -25,8 +30,9 @@ void draw(){
     brake.percentage = 0;
     cap_voltage = 0;
   }
+  */
   
-  //myPort =  new Serial(this, Serial.list()[0], 115200);
+  
     
   apps1.draw_sensor(50, 54);
   apps2.draw_sensor(150, 54);

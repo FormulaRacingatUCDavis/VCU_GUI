@@ -14,6 +14,7 @@ final int SOFT_BSPD = 0x86;
 final int SHUTDOWN_OPEN = 0x87;
 final int UNCALIBRATED = 0x88;
 final int HARD_BSPD = 0x89;
+final int MC_FAULT = 0x8A;
 
 void print_state(int x, int y){
   String s = "";
@@ -56,6 +57,9 @@ void print_state(int x, int y){
       break;
     case UNCALIBRATED:
       s = "PEDALS NOT CALIBRATED";
+      break;
+    case MC_FAULT:
+      s = "MC FAULT";
       break;
     default:
       s = "UNKNOWN STATE";

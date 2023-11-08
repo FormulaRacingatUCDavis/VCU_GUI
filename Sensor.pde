@@ -2,7 +2,7 @@ final int bar_height = 120;
 final int bar_width = 40;
 
 class Sensor{
-  //public int raw = 0;
+  public int raw = 0;
   public int percentage = 50; 
   //public int range = 0; 
   public boolean calibrated = true;
